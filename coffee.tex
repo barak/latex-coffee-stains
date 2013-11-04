@@ -1,5 +1,12 @@
 \documentclass{article}
-\usepackage{coffee}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+
+\usepackage{coffee3}
+
+
+
 \begin{document}
 \title{LaTeX Coffee Stains}
 \author{Hanno Rein\\
@@ -7,7 +14,16 @@
 Cambridge University}
 \renewcommand{\today}{April 3, 2009}
 \maketitle
-\coffee[0.4pt]{1}
+
+%
+% the first parameter is the transparency in the interval [0,1]
+% the second parameter is the scale.  normal scale is 1.
+% The third paramter is the angle in degrees in the interval [0,360]
+%
+\cofeA{0.075}{0.5}{90}
+
+\cofeA{1}{1.0}{0}
+ 
 \section{Introduction}
 This package provides an essential feature to \LaTeX~that has been missing for too long. It adds a coffee stain to your documents. A lot of time can be saved by printing stains directly on the page rather than adding it manually. You can choose from four different stain types:
 \begin{enumerate}
@@ -18,25 +34,25 @@ This package provides an essential feature to \LaTeX~that has been missing for t
 \end{enumerate}
 
 \section{Usage}
-To use the package, simply place the \texttt{coffee.sty} file in the directory with all of your other \texttt{.tex} files \textit{or} install it properly (consult your distribution's manual). Then include the following line in the header of your document:
+To use the package, simply place the \texttt{coffee3.sty} file in the directory with all of your 
+other \texttt{.tex} files \textit{or} install it properly (consult your distribution's manual). 
+Then include the following line in the header of your document:
 \begin{verbatim}
-\usepackage{coffee}
+\usepackage{coffee3}
 \end{verbatim}
 To place a coffee stain on a page, put one of the following commands in the source code of the relevant page: 
 \begin{verbatim}
-\coffee{1} % stain 1 (see this page)
-\coffee{2} % stain 2 (see next page)
-\coffee{3} % stain 3 (see page 3)
-\coffee{4} % stain 4
+\cofeA{alpha}{scale}{angle}
+\cofeB{alpha}{scale}{angle}
+\cofeC{alpha}{scale}{angle}
+\cofeD{alpha}{scale}{angle}
 \end{verbatim}
-The package requires \texttt{eso-pic}, \texttt{ifthen} and \texttt{pstricks}. Currently it does not work with \texttt{pdflatex}. Sorry about that. If you know how to change this, let me know.  
-\newpage
-\noindent You can adjust the size of the stains as follows:
-\begin{verbatim}
-\coffee[0.3pt]{1}  %small stain
-\coffee[0.7pt]{1}  %large stain
-\end{verbatim}
-If you want to change the position of the stains on the page you have to do some hacking. Have a look at the end of the \texttt{coffee.sty} file. It shouldn't be very hard. 
+where alpha is the transparency factor $\in [0,1]$. The factor of scale is {\tt scale}, and the standard is {\tt scale}=1, 
+and the angle is in degrees $\in [0,360]$. 
+
+
+If you want to change the position of the stains on the page you have to do some hacking. Have a look at the 
+end of the \texttt{coffee3.sty} file. It shouldn't be very hard. 
 
 \section{Copyright}
 You can freely distribute this package as I do not believe in imaginary property. All stains are self-made, photographed by myself, processed with gimp and traced with Inkscape.
@@ -49,11 +65,16 @@ Cambridge CB3 0WA\\
 United Kingdom
 \end{quote}
 See more coffee stains on the next pages.
-\coffee{2}
+\cofeC{0.9}{1}{180}
 \newpage
-\coffee{3}
+\cofeD{0.4}{0.5}{90}
 Coffee is great.
 \newpage
-\coffee[0.1pt]{4}
+\cofeB{0.7}{1}{0}
 Coffee will save the world. 
+
+\newpage
+\cofeA{0.7}{0.75}{2}
+Coffee will save the world. 
+
 \end{document}
