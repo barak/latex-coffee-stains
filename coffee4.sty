@@ -14,6 +14,10 @@
 % by Luis Randez, IUMA, University of Zaragoza 
 % http://pcmap.unizar.es/~pilar/  randez@unizar.es
 %
+% May, 2012
+% Added placement parameters
+% by Adrian Robson
+% http://nepsweb.co.uk/homeapr/
 %
 
 \RequirePackage{kvoptions}
@@ -122,9 +126,9 @@
 \end{tikzpicture}
 }
 
-\newcommand{\cofeA}[3]{
+\newcommand{\cofeAm}[5]{
 \begin{tikzpicture}[remember picture,overlay,opacity=#1,scale=#2]
-\node [rotate=#3] at (current page.center) { \AAA{#1}{#2/2}};
+\node [rotate=#3, xshift=#4, yshift=#5] at (current page.center) { \AAA{#1}{#2/2}};
 \end{tikzpicture}
 }
 
@@ -161,10 +165,9 @@
 \end{tikzpicture}
 }
 
-
-\newcommand{\cofeB}[3]{
+\newcommand{\cofeBm}[5]{
 \begin{tikzpicture}[remember picture,overlay,opacity=#1,scale=#2]
-\node [rotate=#3] at (current page.center) { \BBB{#1}{#2/2}};
+\node [rotate=#3, xshift=#4, yshift=#5] at (current page.center) { \BBB{#1}{#2/2}};
 \end{tikzpicture}
 }
 
@@ -189,10 +192,9 @@
 \end{tikzpicture}
 }
 
-
-\newcommand{\cofeC}[3]{
+\newcommand{\cofeCm}[5]{
 \begin{tikzpicture}[remember picture,overlay,opacity=#1,scale=#2]
-\node [rotate=#3] at (current page.center) { \CCC{#1}{#2/2}};
+\node [rotate=#3, xshift=#4, yshift=#5] at (current page.center) { \CCC{#1}{#2/2}};
 \end{tikzpicture}
 }
 
@@ -480,10 +482,8 @@
 \end{tikzpicture}
 }
 
-
-
-\newcommand{\cofeD}[3]{
+\newcommand{\cofeDm}[5]{
 \begin{tikzpicture}[remember picture,overlay,opacity=#1,scale=#2]
-\node [rotate=#3] at (current page.center) { \DDD{#1}{#2/2}};
+\node [rotate=#3, xshift=#4, yshift=#5] at (current page.center) { \DDD{#1}{#2/2}};
 \end{tikzpicture}
 }

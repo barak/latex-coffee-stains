@@ -3,9 +3,7 @@
 \usepackage{verbatim}
 \usetikzlibrary{arrows,shapes}
 
-\usepackage{coffee3}
-
-
+\usepackage{coffee4}
 
 \begin{document}
 \title{LaTeX Coffee Stains}
@@ -15,14 +13,7 @@ Cambridge University}
 \renewcommand{\today}{April 3, 2009}
 \maketitle
 
-%
-% the first parameter is the transparency in the interval [0,1]
-% the second parameter is the scale.  normal scale is 1.
-% The third paramter is the angle in degrees in the interval [0,360]
-%
-\cofeA{0.075}{0.5}{90}
-
-\cofeA{1}{1.0}{0}
+\cofeAm{1}{1.0}{0}{5.5cm}{3cm}
  
 \section{Introduction}
 This package provides an essential feature to \LaTeX~that has been missing for too long. It adds a coffee stain to your documents. A lot of time can be saved by printing stains directly on the page rather than adding it manually. You can choose from four different stain types:
@@ -38,21 +29,18 @@ To use the package, simply place the \texttt{coffee3.sty} file in the directory 
 other \texttt{.tex} files \textit{or} install it properly (consult your distribution's manual). 
 Then include the following line in the header of your document:
 \begin{verbatim}
-\usepackage{coffee3}
+\usepackage{coffee4}
 \end{verbatim}
 To place a coffee stain on a page, put one of the following commands in the source code of the relevant page: 
 \begin{verbatim}
-\cofeA{alpha}{scale}{angle}
-\cofeB{alpha}{scale}{angle}
-\cofeC{alpha}{scale}{angle}
-\cofeD{alpha}{scale}{angle}
+\cofeAm{alpha}{scale}{angle}{xoff}{yoff}
+\cofeBm{alpha}{scale}{angle}{xoff}{yoff}
+\cofeCm{alpha}{scale}{angle}{xoff}{yoff}
+\cofeDm{alpha}{scale}{angle}{xoff}{yoff}
 \end{verbatim}
-where alpha is the transparency factor $\in [0,1]$. The factor of scale is {\tt scale}, and the standard is {\tt scale}=1, 
-and the angle is in degrees $\in [0,360]$. 
-
-
-If you want to change the position of the stains on the page you have to do some hacking. Have a look at the 
-end of the \texttt{coffee3.sty} file. It shouldn't be very hard. 
+where alpha is the transparency factor $\in [0,1]$. The scale factor is {\tt scale}, and the standard is {\tt scale}=1. 
+The angle is in degrees $\in [0,360]$. 
+The position relative to the centre of the page is given by x and y offsets \texttt{xoff} and \texttt{yoff}.
 
 \section{Copyright}
 You can freely distribute this package as I do not believe in imaginary property. All stains are self-made, photographed by myself, processed with gimp and traced with Inkscape.
@@ -65,16 +53,16 @@ Cambridge CB3 0WA\\
 United Kingdom
 \end{quote}
 See more coffee stains on the next pages.
-\cofeC{0.9}{1}{180}
+\cofeCm{0.9}{1}{180}{0}{0}
 \newpage
-\cofeD{0.4}{0.5}{90}
+\cofeDm{0.4}{0.5}{90}{0}{0}
 Coffee is great.
 \newpage
-\cofeB{0.7}{1}{0}
+\cofeBm{0.7}{1}{0}{0}{0}
 Coffee will save the world. 
 
 \newpage
-\cofeA{0.7}{0.75}{2}
+\cofeAm{0.7}{0.75}{2}{0}{0}
 Coffee will save the world. 
 
 \end{document}
