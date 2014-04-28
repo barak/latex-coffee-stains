@@ -1,0 +1,19 @@
+Source: latex-coffee-stains
+Section: non-free/tex
+Priority: extra
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Build-Depends: debhelper (>= 9), tex-common,
+		rubber, texlive-pictures, pgf
+Standards-Version: 3.9.5
+Homepage: http://hanno-rein.de/archives/349
+Vcs-Git: git://anonscm.debian.org/collab-maint/latex-coffee-stains.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/latex-coffee-stains.git
+
+Package: latex-coffee-stains
+Architecture: all
+Depends: ${misc:Depends}, texlive-latex-base
+Description: Add a coffee stain to your LaTeX documents
+ Provides an essential feature that has been missing from LaTeX for
+ far too long: coffee stains.  Much time can be saved by printing them
+ directly thus avoiding the laborious manual coffee staining process.
+ There are four different stain types to choose from.

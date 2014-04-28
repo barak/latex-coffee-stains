@@ -1,0 +1,22 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: latex-coffee-stains
+Source: http://hanno-rein.de/downloads/coffee4.tar.gz
+
+Files: *
+Copyright: 2010, Hanno Rein
+License: Unbeliever
+ You can freely distribute this package as I do not believe in
+ imaginary property. All stains are self-made, photographed by myself,
+ processed with gimp and traced with Inkscape.  Donations should be
+ made in coffee only.  My address is
+ .
+ Hanno Rein
+ DAMTP, CMS
+ Wilberforce Road
+ Cambridge CB3 0WA
+ United Kingdom
+
+Files: debian/*
+Copyright: 2014, Barak A. Pearlmutter
+License: Public Domain
+ This material is released into the public domain.

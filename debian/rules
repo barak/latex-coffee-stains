@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --parallel --with tex
+
+coffee4.pdf: coffee4.tex coffee4.sty
+	rubber --ps --pdf coffee4.tex
+
+
+override_dh_installdocs: coffee4.pdf
+	dh_installdocs
+
+override_dh_compress:
+	dh_compress -X.pdf
