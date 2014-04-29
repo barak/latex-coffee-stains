@@ -6,15 +6,24 @@ Files: *
 Copyright: 2010, Hanno Rein
 License: Unbeliever
  You can freely distribute this package as I do not believe in
- imaginary property. All stains are self-made, photographed by myself,
- processed with gimp and traced with Inkscape.  Donations should be
- made in coffee only.  My address is
+ imaginary property.  All stains are self-made, photographed by
+ myself, processed with gimp and traced with Inkscape.  Donations
+ should be made in coffee only.  My address is
  .
  Hanno Rein
  DAMTP, CMS
  Wilberforce Road
  Cambridge CB3 0WA
  United Kingdom
+ .
+ Clarifying email regarding redistribution of derived versions:
+ .
+ Date: Mon, 28 Apr 2014 14:31:50 -0400
+ From: Hanno Rein <hanno@hanno-rein.de>
+ To: "Barak A. Pearlmutter" <barak@cs.nuim.ie>
+ Subject: Re: coffee stains copyright
+ .
+ I herby explicitly give you permission to distribute derivatives.
 
 Files: debian/*
 Copyright: 2014, Barak A. Pearlmutter
