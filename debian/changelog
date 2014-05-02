@@ -1,3 +1,10 @@
+latex-coffee-stains (4-2) unstable; urgency=medium
+
+  * update copyright: everything is a-okay!
+  * target main, not non-free, silly cut-and-paste error
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 02 May 2014 10:45:28 +0100
+
 latex-coffee-stains (4-1) unstable; urgency=low
 
   * initial version (closes: #746266)
