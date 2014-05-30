@@ -1,3 +1,9 @@
+latex-coffee-stains (4-3) unstable; urgency=medium
+
+  * build dependency on ghostscript for ps2pdf (closes: #749868)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 30 May 2014 11:56:19 +0100
+
 latex-coffee-stains (4-2) unstable; urgency=medium
 
   * update copyright: everything is a-okay!
