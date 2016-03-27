@@ -1,3 +1,9 @@
+latex-coffee-stains (4-4) unstable; urgency=medium
+
+  * silence lintian
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 27 Mar 2016 11:08:27 +0100
+
 latex-coffee-stains (4-3) unstable; urgency=medium
 
   * build dependency on ghostscript for ps2pdf (closes: #749868)
