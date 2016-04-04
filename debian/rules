@@ -3,7 +3,7 @@
 	dh $@ --parallel --with tex
 
 coffee4.pdf: coffee4.tex coffee4.sty
-	rubber --ps --pdf coffee4.tex
+	latexmk --pdf coffee4.tex
 
 
 override_dh_installdocs: coffee4.pdf
