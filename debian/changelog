@@ -1,3 +1,9 @@
+latex-coffee-stains (4-5) unstable; urgency=medium
+
+  * use latexmk instead of rubber in generating documentation
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 04 Apr 2016 22:09:20 +0100
+
 latex-coffee-stains (4-4) unstable; urgency=medium
 
   * silence lintian
