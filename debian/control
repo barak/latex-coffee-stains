@@ -2,10 +2,10 @@ Source: latex-coffee-stains
 Section: tex
 Priority: extra
 Maintainer: Barak A. Pearlmutter <bap@debian.org>
-Build-Depends: debhelper (>= 9), tex-common,
+Build-Depends: debhelper (>= 10), tex-common,
 		ghostscript,
-		latexmk, texlive-pictures, pgf
-Standards-Version: 3.9.7
+		latexmk, texlive-pictures
+Standards-Version: 3.9.8
 Homepage: http://hanno-rein.de/archives/349
 Vcs-Git: git://anonscm.debian.org/collab-maint/latex-coffee-stains.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/latex-coffee-stains.git
