@@ -1,3 +1,11 @@
+latex-coffee-stains (4-6) unstable; urgency=medium
+
+  * dh10
+  * bump policy
+  * texlive-pictures now silently provides pgf (closes: #867093)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 04 Jul 2017 11:52:13 +0100
+
 latex-coffee-stains (4-5) unstable; urgency=medium
 
   * use latexmk instead of rubber in generating documentation
