@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 %:
-	dh $@ --parallel --with tex
+	dh $@ --with tex
 
 coffee4.pdf: coffee4.tex coffee4.sty
 	latexmk --pdf coffee4.tex
