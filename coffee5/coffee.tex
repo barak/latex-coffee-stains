@@ -1,20 +1,20 @@
 \documentclass{article}
-\usepackage{tikz}
-\usepackage{verbatim}
-\usetikzlibrary{arrows,shapes}
+\usepackage[onEveryPage]{coffee}
 
-\usepackage{coffee4}
+
+\usepackage{verbatim}
+\usepackage{lipsum}
+
 
 \begin{document}
 \title{LaTeX Coffee Stains}
 \author{Hanno Rein\\
 \texttt{http://hanno-rein.de}\\
 Cambridge University}
-\renewcommand{\today}{April 3, 2009}
+%\renewcommand{\today}{April 3, 2009}
 \maketitle
 
-\cofeAm{1}{1.0}{0}{5.5cm}{3cm}
- 
+
 \section{Introduction}
 This package provides an essential feature to \LaTeX~that has been missing for too long. It adds a coffee stain to your documents. A lot of time can be saved by printing stains directly on the page rather than adding it manually. You can choose from four different stain types:
 \begin{enumerate}
@@ -25,11 +25,11 @@ This package provides an essential feature to \LaTeX~that has been missing for t
 \end{enumerate}
 
 \section{Usage}
-To use the package, simply place the \texttt{coffee3.sty} file in the directory with all of your 
+To use the package, simply place the \texttt{coffee.sty} file in the directory with all of your 
 other \texttt{.tex} files \textit{or} install it properly (consult your distribution's manual). 
 Then include the following line in the header of your document:
 \begin{verbatim}
-\usepackage{coffee4}
+\usepackage{coffee}
 \end{verbatim}
 To place a coffee stain on a page, put one of the following commands in the source code of the relevant page: 
 \begin{verbatim}
@@ -40,7 +40,20 @@ To place a coffee stain on a page, put one of the following commands in the sour
 \end{verbatim}
 where alpha is the transparency factor $\in [0,1]$. The scale factor is {\tt scale}, and the standard is {\tt scale}=1. 
 The angle is in degrees $\in [0,360]$. 
-The position relative to the centre of the page is given by x and y offsets \texttt{xoff} and \texttt{yoff}.
+The position relative to the centre of the page is given by x and y
+offsets \texttt{xoff} and \texttt{yoff}.
+
+\medskip
+Since version 5, you may also use
+\begin{verbatim}
+\cofeSplash{}
+\end{verbatim}
+to place a random splash with random parameters on the current
+page. There is now also a package option to put coffee on every page like
+\begin{verbatim}
+\usepackage[onEveryPage]{coffee}
+\end{verbatim}
+
 
 \section{Copyright}
 You can freely distribute this package as I do not believe in imaginary property. All stains are self-made, photographed by myself, processed with gimp and traced with Inkscape.
@@ -53,16 +66,8 @@ Cambridge CB3 0WA\\
 United Kingdom
 \end{quote}
 See more coffee stains on the next pages.
-\cofeCm{0.9}{1}{180}{0}{0}
 \newpage
-\cofeDm{0.4}{0.5}{90}{0}{0}
-Coffee is great.
-\newpage
-\cofeBm{0.7}{1}{0}{0}{0}
-Coffee will save the world. 
-
-\newpage
-\cofeAm{0.7}{0.75}{2}{0}{0}
-Coffee will save the world. 
+\section{Nonsense text with coffee splashes - just as in real papers}
+\lipsum[1-42]
 
 \end{document}
