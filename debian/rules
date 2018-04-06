@@ -2,11 +2,13 @@
 %:
 	dh $@ --with tex
 
-coffee4.pdf: coffee4.tex coffee4.sty
-	latexmk --pdf coffee4.tex
+coffee.pdf: coffee.tex coffee.sty
+	latexmk --pdf coffee.tex
 
+override_dh_installchangelogs:
+	dh_installchangelogs README.md
 
-override_dh_installdocs: coffee4.pdf
+override_dh_installdocs: coffee.pdf
 	dh_installdocs
 
 override_dh_compress:

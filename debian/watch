@@ -1,2 +1,6 @@
 version=3
 http://hanno-rein.de/archives/349 .*/coffee(.*).tar.gz
+
+# also see
+# https://github.com/Echsecutor/coffee.git
+# where v5 came from

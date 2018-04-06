@@ -1,9 +1,11 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: latex-coffee-stains
 Source: http://hanno-rein.de/downloads/coffee4.tar.gz
+	https://github.com/Echsecutor/coffee
 
 Files: *
 Copyright: 2010, Hanno Rein
+	   2014, Sebastian Schmittner
 License: Unbeliever
  You can freely distribute this package as I do not believe in
  imaginary property.  All stains are self-made, photographed by
