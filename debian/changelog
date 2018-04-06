@@ -1,3 +1,12 @@
+latex-coffee-stains (5-1) unstable; urgency=medium
+
+  * dh11
+  * bump policy
+  * new source of fresh coffee!
+    https://github.com/Echsecutor/coffee
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 06 Apr 2018 20:43:12 +0100
+
 latex-coffee-stains (4-6) unstable; urgency=medium
 
   * dh10
