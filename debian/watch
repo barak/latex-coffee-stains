@@ -1,6 +1,9 @@
-version=3
+version=4
+
+# v1 through v4
 http://hanno-rein.de/archives/349 .*/coffee(.*).tar.gz
 
-# also see
-# https://github.com/Echsecutor/coffee.git
-# where v5 came from
+# v5:
+#opts="mode=git, pgpmode=none, pretty=5.git%cd.%h" \
+# https://github.com/Echsecutor/coffee.git \
+# heads/master debian uupdate
