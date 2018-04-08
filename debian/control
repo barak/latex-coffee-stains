@@ -12,7 +12,8 @@ Vcs-Browser: https://salsa.debian.org/debian/latex-coffee-stains
 
 Package: latex-coffee-stains
 Architecture: all
-Depends: ${misc:Depends}, texlive-latex-base
+Depends: ${misc:Depends}, tex-common (>= 6)
+Recommends: texlive-latex-base
 Description: Add a coffee stain to your LaTeX documents
  Provides an essential feature that has been missing from LaTeX for
  far too long: coffee stains.  Much time can be saved by printing them
