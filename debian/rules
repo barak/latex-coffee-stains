@@ -2,14 +2,15 @@
 %:
 	dh $@ --with tex
 
-coffee.pdf: coffee.tex coffee.sty
-	latexmk --pdf coffee.tex
+coffee.pdf: coffee.sty
+
+%.pdf: %.tex
+	latexmk --pdf $<
+
+override_dh_auto_build: coffee.pdf
 
 override_dh_installchangelogs:
 	dh_installchangelogs README.md
-
-override_dh_installdocs: coffee.pdf
-	dh_installdocs
 
 override_dh_compress:
 	dh_compress -X.pdf
