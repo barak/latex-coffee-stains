@@ -1,3 +1,9 @@
+latex-coffee-stains (5-2) unstable; urgency=medium
+
+  * hook documentation into debian TeX, e.g., texdoc
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 08 Apr 2018 21:30:32 +0100
+
 latex-coffee-stains (5-1) unstable; urgency=medium
 
   * dh11
