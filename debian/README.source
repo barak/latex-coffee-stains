@@ -1,0 +1,20 @@
+PDF files removed from the upstream tarball, because these are large
+and easily regenerated; in fact if we cannot regenerate them then the
+package itself is broken.
+
+The original upstream produced versions 1 through 4.  Since then some
+others have taken up the mantle, I chose the best and called it
+version 5.  But development isn't organized or systematic; if there's
+ever a version 6 I'd imagine someone else will produce it.
+
+that people have produced a variant of this called LaTeX Wine Stains,
+which just changes the colour.
+ https://www.overleaf.com/latex/examples/latex-wine-stains/cdzqvdhxtgft
+It would make sense to unify these into
+ \usepackage[coffee]{beverage}
+with package options for not just coffee and (red) wine, but
+generalized to tea, and champagne for the final draft, and even
+ \usepackage[chocolate,nicotine]{slob}
+chocolate smears and cigarette burns.
+
+ -- Barak A. Pearlmutter <bap@debian.org>, Sat, 14 Apr 2018 16:34:00 +0100
