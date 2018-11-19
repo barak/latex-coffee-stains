@@ -1,3 +1,11 @@
+latex-coffee-stains (5-3) unstable; urgency=medium
+
+  * bump standards
+  * add some documentation
+  * add pointer to wine stains package
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 19 Nov 2018 09:17:35 +0000
+
 latex-coffee-stains (5-2) unstable; urgency=medium
 
   * hook documentation into debian TeX, e.g., texdoc
