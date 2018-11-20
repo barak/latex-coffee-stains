@@ -25,10 +25,16 @@
 % by Sebastian Schmittner
 % http://www.thp.uni-koeln.de/~ses/ ses@thp.uni-koeln.de
 %
+% November, 2018
+% Added: random bleeding splash \cofeBleed{} (requires ifthen)
+% Added: package option to put random bleeding splash throughout pages
+% by Anthony Mirand
+% https://anthonymirand.github.io anthonypmirand@gmail.com
+%
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{coffee}[2014/12/17 Coffe Staints Version 5]
+\ProvidesPackage{coffee}[2014/12/17 Coffe Staints Version 6]
 
 \RequirePackage{kvoptions}
 
@@ -40,6 +46,7 @@
 \SetupKeyvalOptions{family=coffee,prefix=coffee@}
 
 \DeclareBoolOption{onEveryPage}
+\DeclareBoolOption{bleed}
 
 \ProcessKeyvalOptions*\relax
 
@@ -539,6 +546,54 @@
 %put splashes on every page:
 \RequirePackage{eso-pic}
 \AddToShipoutPicture{\cofeSplash{}}
+}{}
+
+
+
+%generate bleeding cofe splash:
+\newcommand{\cofeBleed}[7]{
+\pgfmathsetmacro{\alpha}{#1 - #7 * \value{depth}}
+\pgfmathsetmacro{\scale}{#2}
+\pgfmathsetmacro{\angle}{#3}
+\pgfmathsetlengthmacro{\xoff}{#4}
+\pgfmathsetlengthmacro{\yoff}{#5}
+\pgfmathtruncatemacro{\variety}{#6}
+
+\ifthenelse{\variety<2}{
+  \ifthenelse{\variety=0}{
+    \cofeAm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+  }{
+    \cofeBm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+  }
+}{
+  \ifthenelse{\variety=2}{
+    \cofeCm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+  }{
+    \cofeDm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+  }
+}
+
+\addtocounter{depth}{1}
+}%end bleed command
+
+
+
+\ifthenelse{\boolean{coffee@bleed}}{
+%bleed random splash across multiple pages:
+\RequirePackage{eso-pic}
+
+\newcounter{depth}\setcounter{depth}{0}
+
+\pgfmathsetmacro{\alpha}{0.9 + 0.1 * rand}
+\pgfmathsetmacro{\scale}{0.7 + 0.5 * rand}
+\pgfmathsetmacro{\angle}{360 * rand}
+\pgfmathsetlengthmacro{\xoff}{rand * 2cm}
+\pgfmathsetlengthmacro{\yoff}{rand * 5cm}
+
+\pgfmathtruncatemacro{\variety}{4 * rand}
+\pgfmathsetmacro{\bleed}{0.1 + 0.1 * rand}
+
+\AddToShipoutPicture{\cofeBleed{\alpha}{\scale}{\angle}{\xoff}{\yoff}{\variety}{\bleed}}
 }{}
 
 

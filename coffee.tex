@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[onEveryPage]{coffee}
+\usepackage[bleed]{coffee}
 
 
 \usepackage{verbatim}
@@ -52,6 +52,17 @@ to place a random splash with random parameters on the current
 page. There is now also a package option to put coffee on every page like
 \begin{verbatim}
 \usepackage[onEveryPage]{coffee}
+\end{verbatim}
+
+\medskip
+Since version 6, you may also use
+\begin{verbatim}
+\cofeBleed{alpha}{scale}{angle}{xoff}{yoff}{bleed}{variety}
+\end{verbatim}
+to place a \texttt{variety} $\in [0,4]$ with random parameters on the current
+page. There is now also a package option to put a bleeding coffee throughout the pages like
+\begin{verbatim}
+\usepackage[bleed]{coffee}
 \end{verbatim}
 
 
