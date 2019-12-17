@@ -2,8 +2,10 @@ latex-coffee-stains (6-2) UNRELEASED; urgency=medium
 
   * debian/copyright: use spaces rather than tabs to start continuation
     lines.
+  * debhelper 12
+  * bump standards
 
- -- Barak A. Pearlmutter <bap@debian.org>  Tue, 17 Dec 2019 15:16:42 +0000
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 17 Dec 2019 15:20:24 +0000
 
 latex-coffee-stains (6-1) unstable; urgency=medium
 
