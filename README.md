@@ -1,7 +1,6 @@
-coffee
-======
+# ☕ coffee ☕
 
-Coffee stains package for latex
+Coffee stains package for LaTeX
 
 ## Usage
 
