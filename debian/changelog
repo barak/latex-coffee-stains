@@ -1,3 +1,10 @@
+latex-coffee-stains (6-3) UNRELEASED; urgency=medium
+
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 21 Apr 2020 13:51:36 +0100
+
 latex-coffee-stains (6-2) unstable; urgency=medium
 
   * debhelper 12
