@@ -31,10 +31,22 @@
 % by Anthony Mirand
 % https://anthonymirand.github.io anthonypmirand@gmail.com
 %
+% April, 2020
+% To avoid stepping on it, rename \alpha ↦ \coffeealpha.
+% See https://bugs.debian.org/958346
+% These macros are being renamed, for extra safety:
+% \alpha   ↦ \coffeealpha
+% \angle   ↦ \coffeeangle
+% \bleed   ↦ \coffeebleed
+% \scale   ↦ \coffeescale
+% \variety ↦ \coffeevariety
+% \xoff    ↦ \coffeexoff
+% \yoff    ↦ \coffeeyoff
+%
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{coffee}[2014/12/17 Coffe Staints Version 6]
+\ProvidesPackage{coffee}[2020/04/21 Coffe Staints Version 7]
 
 \RequirePackage{kvoptions}
 
@@ -516,25 +528,25 @@
 
 %generate random cofe splash:
 \newcommand{\cofeSplash}{
-\pgfmathsetmacro{\alpha}{0.5*rnd+0.2}
-\pgfmathsetmacro{\scale}{0.7 + 0.5*rand}
-\pgfmathsetmacro{\angle}{360*rnd}
-\pgfmathsetlengthmacro{\xoff}{rand*2cm}
-\pgfmathsetlengthmacro{\yoff}{rand*5cm}
+\pgfmathsetmacro{\coffeealpha}{0.5*rnd+0.2}
+\pgfmathsetmacro{\coffeescale}{0.7 + 0.5*rand}
+\pgfmathsetmacro{\coffeeangle}{360*rnd}
+\pgfmathsetlengthmacro{\coffeexoff}{rand*2cm}
+\pgfmathsetlengthmacro{\coffeeyoff}{rand*5cm}
 
-\pgfmathtruncatemacro{\variety}{4*rnd}
+\pgfmathtruncatemacro{\coffeevariety}{4*rnd}
 
-\ifthenelse{\variety<2}{
-  \ifthenelse{\variety=0}{
-    \cofeAm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+\ifthenelse{\coffeevariety<2}{
+  \ifthenelse{\coffeevariety=0}{
+    \cofeAm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }{
-    \cofeBm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+    \cofeBm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }
 }{
-  \ifthenelse{\variety=2}{
-    \cofeCm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+  \ifthenelse{\coffeevariety=2}{
+    \cofeCm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }{
-    \cofeDm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+    \cofeDm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }
 }
 
@@ -552,24 +564,24 @@
 
 %generate bleeding cofe splash:
 \newcommand{\cofeBleed}[7]{
-\pgfmathsetmacro{\alpha}{#1 - #7 * \value{depth}}
-\pgfmathsetmacro{\scale}{#2}
-\pgfmathsetmacro{\angle}{#3}
-\pgfmathsetlengthmacro{\xoff}{#4}
-\pgfmathsetlengthmacro{\yoff}{#5}
-\pgfmathtruncatemacro{\variety}{#6}
+\pgfmathsetmacro{\coffeealpha}{#1 - #7 * \value{depth}}
+\pgfmathsetmacro{\coffeescale}{#2}
+\pgfmathsetmacro{\coffeeangle}{#3}
+\pgfmathsetlengthmacro{\coffeexoff}{#4}
+\pgfmathsetlengthmacro{\coffeeyoff}{#5}
+\pgfmathtruncatemacro{\coffeevariety}{#6}
 
-\ifthenelse{\variety<2}{
-  \ifthenelse{\variety=0}{
-    \cofeAm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+\ifthenelse{\coffeevariety<2}{
+  \ifthenelse{\coffeevariety=0}{
+    \cofeAm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }{
-    \cofeBm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+    \cofeBm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }
 }{
-  \ifthenelse{\variety=2}{
-    \cofeCm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+  \ifthenelse{\coffeevariety=2}{
+    \cofeCm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }{
-    \cofeDm{\alpha}{\scale}{\angle}{\xoff}{\yoff}
+    \cofeDm{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}
   }
 }
 
@@ -584,16 +596,16 @@
 
 \newcounter{depth}\setcounter{depth}{0}
 
-\pgfmathsetmacro{\alpha}{0.9 + 0.1 * rand}
-\pgfmathsetmacro{\scale}{0.7 + 0.5 * rand}
-\pgfmathsetmacro{\angle}{360 * rand}
-\pgfmathsetlengthmacro{\xoff}{rand * 2cm}
-\pgfmathsetlengthmacro{\yoff}{rand * 5cm}
+\pgfmathsetmacro{\coffeealpha}{0.9 + 0.1 * rand}
+\pgfmathsetmacro{\coffeescale}{0.7 + 0.5 * rand}
+\pgfmathsetmacro{\coffeeangle}{360 * rand}
+\pgfmathsetlengthmacro{\coffeexoff}{rand * 2cm}
+\pgfmathsetlengthmacro{\coffeeyoff}{rand * 5cm}
 
-\pgfmathtruncatemacro{\variety}{4 * rand}
-\pgfmathsetmacro{\bleed}{0.1 + 0.1 * rand}
+\pgfmathtruncatemacro{\coffeevariety}{4 * rand}
+\pgfmathsetmacro{\coffeebleed}{0.1 + 0.1 * rand}
 
-\AddToShipoutPicture{\cofeBleed{\alpha}{\scale}{\angle}{\xoff}{\yoff}{\variety}{\bleed}}
+\AddToShipoutPicture{\cofeBleed{\coffeealpha}{\coffeescale}{\coffeeangle}{\coffeexoff}{\coffeeyoff}{\coffeevariety}{\coffeebleed}}
 }{}
 
 
