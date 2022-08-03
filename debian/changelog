@@ -1,10 +1,11 @@
-latex-coffee-stains (7-2) UNRELEASED; urgency=medium
+latex-coffee-stains (7-2) unstable; urgency=medium
 
   * Add debian/README.source pointer to CTAN fork.
   * Bump debhelper from old 12 to 13.
   * Update standards version to 4.6.1, no changes needed.
+  * Move documentation into /usr/share/doc/ per lintian.
 
- -- Barak A. Pearlmutter <bap@debian.org>  Wed, 03 Aug 2022 12:00:08 +0100
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 03 Aug 2022 14:32:22 +0100
 
 latex-coffee-stains (7-1) unstable; urgency=medium
 
