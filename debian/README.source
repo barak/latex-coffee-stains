@@ -7,7 +7,7 @@ others have taken up the mantle, I chose the best and called it
 version 5.  But development isn't organized or systematic; if there's
 ever a version 6 I'd imagine someone else will produce it.
 
-that people have produced a variant of this called LaTeX Wine Stains,
+People have produced a variant of this called LaTeX Wine Stains,
 which just changes the colour.
  https://www.overleaf.com/latex/examples/latex-wine-stains/cdzqvdhxtgft
 It would make sense to unify these into
@@ -17,4 +17,11 @@ generalized to tea, and champagne for the final draft, and even
  \usepackage[chocolate,nicotine]{slob}
 chocolate smears and cigarette burns.
 
- -- Barak A. Pearlmutter <bap@debian.org>, Sat, 14 Apr 2018 16:34:00 +0100
+There is a version in CTAN called coffeestains
+ https://framagit.org/Pathe/coffeestains
+which has translations of the documentation into several languages,
+and significant updates to the actual code. It is included in
+package texlive-pictures, so it probably makes sense to obsolete this
+latex-coffee-stains package.
+
+ -- Barak A. Pearlmutter <bap@debian.org>, Wed,  3 Aug 2022 11:58:54 +0100

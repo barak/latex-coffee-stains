@@ -1,3 +1,9 @@
+latex-coffee-stains (7-2) UNRELEASED; urgency=medium
+
+  * Add debian/README.source pointer to CTAN fork.
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 03 Aug 2022 12:00:08 +0100
+
 latex-coffee-stains (7-1) unstable; urgency=medium
 
   * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
