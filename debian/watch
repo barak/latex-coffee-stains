@@ -1,9 +1,14 @@
-version=4
+Version: 5
 
 # v1 through v4
-http://hanno-rein.de/archives/349 .*/coffee(.*).tar.gz
+# Source: http://hanno-rein.de/archives/349
+# Matching-Pattern: .*/coffee@ANY_VERSION@@ARCHIVE_EXT@
 
-# v5:
-#opts="mode=git, pgpmode=none, pretty=5.git%cd.%h" \
-# https://github.com/Echsecutor/coffee.git \
-# heads/master debian uupdate
+# v5
+# Template: GitHub
+# Owner: Echsecutor
+# Project: coffee
+
+# v6+
+Source: https://github.com/barak/coffee/tags
+Matching-Pattern: .*/upstream/@ANY_VERSION@@ARCHIVE_EXT@

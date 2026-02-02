@@ -20,8 +20,9 @@ chocolate smears and cigarette burns.
 There is a version in CTAN called coffeestains
  https://framagit.org/Pathe/coffeestains
 which has translations of the documentation into several languages,
-and significant updates to the actual code. It is included in
-package texlive-pictures, so it probably makes sense to obsolete this
+and significant updates to the actual code, is included in package
+texlive-pictures. It is, however, missing the random coffee stains
+options. In any case, it might make sense to flush this separate
 latex-coffee-stains package.
 
  -- Barak A. Pearlmutter <bap@debian.org>, Wed,  3 Aug 2022 11:58:54 +0100

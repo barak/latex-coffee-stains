@@ -1,3 +1,10 @@
+latex-coffee-stains (7-3) unstable; urgency=medium
+
+  * Clean coffee.pdf (closes: #1048442)
+  * Minor packaging script updates
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 02 Feb 2026 10:37:23 +0000
+
 latex-coffee-stains (7-2) unstable; urgency=medium
 
   * Add debian/README.source pointer to CTAN fork.
