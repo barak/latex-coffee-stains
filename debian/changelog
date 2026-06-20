@@ -1,3 +1,10 @@
+latex-coffee-stains (7-4) unstable; urgency=medium
+
+  * Bump policy
+  * Force source date for reproducible build (closes: #1140365)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 20 Jun 2026 15:29:20 +0100
+
 latex-coffee-stains (7-3) unstable; urgency=medium
 
   * Clean coffee.pdf (closes: #1048442)

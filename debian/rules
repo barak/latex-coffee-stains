@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
+
+export FORCE_SOURCE_DATE=1
+
 %:
 	dh $@ --with tex
 
