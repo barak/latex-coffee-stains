@@ -560,11 +560,11 @@
 \AddToShipoutPicture{\cofeSplash{}}
 }{}
 
-
+\newcounter{depth}\setcounter{depth}{0}
 
 %generate bleeding cofe splash:
-\newcommand{\cofeBleed}[7]{
-\pgfmathsetmacro{\coffeealpha}{#1 - #7 * \value{depth}}
+\newcommand{\cofeBleed}[6]{
+\pgfmathsetmacro{\coffeealpha}{#1/(1 + \value{depth})}
 \pgfmathsetmacro{\coffeescale}{#2}
 \pgfmathsetmacro{\coffeeangle}{#3}
 \pgfmathsetlengthmacro{\coffeexoff}{#4}
@@ -594,7 +594,6 @@
 %bleed random splash across multiple pages:
 \RequirePackage{eso-pic}
 
-\newcounter{depth}\setcounter{depth}{0}
 
 \pgfmathsetmacro{\coffeealpha}{0.9 + 0.1 * rand}
 \pgfmathsetmacro{\coffeescale}{0.7 + 0.5 * rand}
